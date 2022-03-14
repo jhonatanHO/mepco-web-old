@@ -1,0 +1,18 @@
+iconos:
+---   carta   --- 
+<i class="fa fa-envelope fa-lg"></i>
+
+---   planeta   ---
+<i class="fa fa-globe fa-lg"></i>
+
+---   telefono fijo   ---
+<i class="fa fa-phone fa-lg"></i>
+
+---   marca google maps   ---
+<i class="fa fa-map-marker fa-lg"></i>
+
+pagina de hystory (nosotros), muy buen slider de tiempo:
+http://corpress.html.themeforest.createit.pl/history.html
+
+http://corpress.html.themeforest.createit.pl/aboutus.html
+http://corpress.html.themeforest.createit.pl/services.html

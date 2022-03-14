@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="es"> <!--<![endif]-->
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>MEPCO - Alquiler de equipos de construccion</title>
+    <meta name="description" content="Alquiler de equipos de construccion. Telehandlers - Manipuladores telescopicos, montacargas, elevadores, plantas de concreto...">
+    <meta name="author" content="Leonid Ramirez O.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="ico-mepco.ico">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="arcanocode/css/mepco.css">
+
+    <!--[if lt IE 9]>
+    <script src="assets/bootstrap/js/html5shiv.min.js"></script>
+    <script src="assets/bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/js/device.min.js"></script>
+
+    <script src="arcanocode/js/data-alquiler.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        var equipos= dataAlquiler.data();
+
+        function repetir(modelo, titulo, descripcion, enlace, palabra){
+            var card;
+                card = '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">'+
+                        '   <article itemscope itemtype="http://schema.org/Product">'+
+                        '        <div class="d-imgproducto">'+
+                        '            <div>'+
+                        '                <a href="'+enlace+'"><img itemprop="image" src="'+modelo+'" alt="'+palabra+'"/></a>'+
+                        '            </div>'+               
+                        '        </div>'+            
+                        '        <div class="d-detalleproducto">'+
+                        '            <div>'+            
+                        '            <h4 class="uppercase"><a href="'+enlace+'"><span itemprop="name">'+titulo+'</span></a>'+
+                        '            </h4>'+                            
+                        '            </div>'+        
+                        '            <p><span itemprop="description">'+
+                        '               '+descripcion+''+                        
+                        '               </span><br>'+            
+                        '               <a itemprop="url" href="'+enlace+'">Leer mas</a>'+            
+                        '            </p>'+                        
+                        '        </div>'+            
+                        '    </article>'+            
+                        '</div>';
+            return card;
+        }
+        
+        $('document').ready(function(){
+            for (var i = 0; i < equipos.length; i++) {
+                var elemento= repetir(equipos[i].modelo, equipos[i].titulo, equipos[i].descripcion, equipos[i].enlace, equipos[i].palabra);
+                $('#' + equipos[i].tabid + '>.products').append(elemento);
+            };
+        });
+
+    </script>
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-70688885-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+    window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+    d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+    _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+    $.src="//v2.zopim.com/?3cT7OlKEbLXyXv7K5wMrkbTR4X4bDX8R";z.t=+new Date;$.
+    type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+    </script>
+    <!--End of Zopim Live Chat Script-->
+    
+</head>
+<body class="header-light navbar-light navbar-fixed with-topbar withAnimation green">
+
+<header class="hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <!--<div class="text-wrapper"><i class="fa fa-phone-square fa-fw"></i> Telf: 715-2941 / 478-2244  |  Fax: 718-7380  |  Nextel: 837*3906</div>-->
+ <div class="text-wrapper"><i class="fa fa-phone-square fa-fw"></i> Telf: 7172457</div>
+            </div>
+            <div class="col-md-6 text-right visible-md visible-lg">
+                <div class="text-wrapper"><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:ventas@mepcoperu.com">ventas@mepcoperu.com</a></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container"></div>
+
+<nav class="navbar yamm" role="navigation">
+<div class="container">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header hidden-xs">
+    <a class="navbar-brand" href="index.html"><img src="arcanocode/img/logos-de-marcas/logo-mepco.png" class="d-logop" alt="Logo de Mepco"/></a>
+</div>
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse no-transition" id="bs-example-navbar-collapse-1">
+<a href="#" class="showHeaderSearch hidden-xs"></a>
+<ul class="nav navbar-nav navbar-right">
+<li class="dropdown">
+    <a href="index.html"> Inicio </a>
+</li>
+<li class="dropdown">
+    <a href="venta.html"> Venta </a>
+</li>
+<li class="dropdown active">
+    <a href="alquiler.html"> Alquiler </a>   
+</li>
+<li class="dropdown">
+    <a href="marcas.html"> Marcas </a> 
+</li>
+<li class="dropdown">
+    <a href="nosotros.html"> Nosotros </a> 
+</li>
+
+
+<li class="dropdown">
+    <a href="blog-entrada.html" class="dropdown-toggle" data-toggle="dropdown"> Blog <i class="fa fa-fw fa-angle-down"></i></a>
+    <ul class="dropdown-menu yamm-dropdown">
+        <li>
+            <div class="yamm-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                                        <span class="navbar-title">
+                                            Blog de Noticias
+                                        </span>
+                        <ul class="list-unstyled">
+                            <li><a href="blog-entrada.html"><i class="fa fa-fw fa-angle-right"></i>NOTAS DE PRENSA</a></li>
+                            <!-- <li><a href="#"><i class="fa fa-fw fa-angle-right"></i> Evento - MERLO DAY</a></li> -->
+                        </ul>
+                    </div>                    
+                    <div class="col-sm-6 nav-image">
+                        <img src="assets/images/content/menu-blog.jpg" alt="Blog Image"/>
+                    </div>
+                </div>
+                <div class="row nav-bottom">
+                    <div class="col-md-12">
+                        <span class="btm-sec"><img src="assets/images/content/logo-mepco2.png" alt="logo mepco menu blog" about="Mepco"></span>
+                        <span class="btm-sec">Blog</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</li>
+
+
+<li class="dropdown">
+    <a href="contactanos.html">Contacto</a>
+</li>
+</ul>
+
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+
+<div class="container"></div>
+
+<!-- END CABEZERA LEO -->
+
+
+
+<div id="wrapper">
+
+<!-- VISIBLE COPY OF THE HEADER ONLY IN MOBILE NEEDED FOR THE SIDE MENU EFFECT -->
+
+<div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header visible-xs">
+        <a class="navbar-brand" href="index.html"><img src="arcanocode/img/logos-de-marcas/logo-mepco.png" class="d-logop" alt="Logo Mepco"/></a>
+        <button type="button" class="navbar-toggle" id="sidebar-toggle">
+            <span class="sr-only">navegador</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="showHeaderSearch"><i class="fa fa-fw fa-search"></i></a>
+    </div>
+</div>
+
+<!-- END -->
+
+<!-- START REVOLUTION SLIDER 2.3.91 -->
+<!-- END REVOLUTION SLIDER -->
+
+
+
+<section class="d-arcano-section section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="uppercase d-h1"> > Alquiler</h1>
+                <div id="menulateral" class="tabs-vertical">
+                    <div id="accordion" class="panel-group accordion" style="display:table-cell; vertical-align:top;width:27.5%;">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse01">
+                                    Manipuladores Telescópicos
+                                </a>
+                            </div>
+                            <div id="collapse01" class="panel-collapse tabs-vertical collapse in"><!-- leo -->
+                                <ul class="nav nav-tabs" style="width:300px;">
+                                    <li class="active">
+                                        <a href="#tab0101" data-toggle="tab">Rígidos</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab0102" data-toggle="tab">Giratorios</a>
+                                    </li> 
+                                    <li>
+                                        <a href="#tab0103" data-toggle="tab">Accesorios Merlo</a>
+                                    </li>                                          
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse02" class="collapsed">
+                                    Montacargas y Elevadores
+                                </a>
+                            </div>
+                            <div id="collapse02" class="panel-collapse collapse tabs-vertical">
+                                <ul class="nav nav-tabs" style="width:300px;">
+                                    <li>
+                                        <a href="#tab0201" data-toggle="tab">Elevador de personas y materiales</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab0202" data-toggle="tab">Montacargas de materiales</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab0203" data-toggle="tab">Plataformas de trabajo para fachadas</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse03" class="collapsed">
+                                    Plantas de Concreto
+                                </a>
+                            </div>
+                            <div id="collapse03" class="panel-collapse collapse tabs-vertical">
+                                <ul class="nav nav-tabs" style="width:300px;"> 
+                                    <li>
+                                        <a href="#tab0301" data-toggle="tab">Plantas de concreto IMER GROUP</a>
+                                    </li>                             
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse04" class="collapsed">
+                                    Plataformas Aereas
+                                </a>
+                            </div>
+                            <div id="collapse04" class="panel-collapse collapse tabs-vertical">
+                                <ul class="nav nav-tabs" style="width:300px;">
+                                    <li>
+                                        <a href="#tab0401" data-toggle="tab">SCISSOR LIFT(Tijeras)</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab0402" data-toggle="tab">MAN LIFT(Articuladas)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>   
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse05" class="collapsed">
+                                    Movimiento de Tierra
+                                </a>
+                            </div>
+                            <div id="collapse05" class="panel-collapse collapse tabs-vertical">
+                                <ul class="nav nav-tabs" style="width:300px;">
+                                    <li>
+                                        <a href="#tab0501" data-toggle="tab">Mini Excavadoras</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>                             
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse07" class="collapsed">
+                                    Acc. Grua Torre
+                                </a>
+                            </div>
+                            <div id="collapse07" class="panel-collapse collapse tabs-vertical">
+                                <ul class="nav nav-tabs" style="width:300px;">
+                                    <li>
+                                        <a href="#tab0701" data-toggle="tab">Izaje de parihuelas</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab0702" data-toggle="tab">Tolva basculante para desmonte</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab0703" data-toggle="tab">Baldes para concreto</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab0705" data-toggle="tab">Plataforma para personas</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab0706" data-toggle="tab">Caja para portar materiales</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab0707" data-toggle="tab">Cesta para puntales</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse08" class="collapsed">
+                                    Equipos livianos de construcción
+                                </a>
+                            </div>
+                            <div id="collapse08" class="panel-collapse collapse tabs-vertical">
+                                <ul class="nav nav-tabs" style="width:300px;">
+                                    <li>
+                                        <a href="#tab0803" data-toggle="tab">Winche trifásico</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab0804" data-toggle="tab">Soporte para winche trifásico</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab0805" data-toggle="tab">Mezcladoras electricas</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab0806" data-toggle="tab">Mezcladoras a gasolina</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="tab0101">
+                            <div class="products row col-sm-12 col-md-12">
+                               
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab0102">
+                            <div class="products row col-sm-12 col-md-12">
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab0103">
+                            <div class="products row col-sm-12 col-md-12">
+                                                 
+                            </div>        
+                        </div>        
+                        <div class="tab-pane fade" id="tab0201">
+                            <div class="products row col-sm-12 col-md-12">
+                                
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab0202">
+                            <div class="products row col-sm-12 col-md-12">
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab0203">
+                            <div class="products row col-sm-12 col-md-12">
+
+                            </div>
+                        </div>        
+                        <div class="tab-pane fade" id="tab0301">
+                            <div class="products row col-sm-12 col-md-12">                         
+                                
+                            </div>
+                        </div>       
+                        <div class="tab-pane fade" id="tab0401">
+                            <div class="products row col-sm-12 col-md-12">
+                               
+                            </div>    
+                        </div>                                        
+                        <div class="tab-pane fade" id="tab0402">
+                            <div class="products row col-sm-12 col-md-12">
+
+                            </div>
+                        </div> 
+                        <div class="tab-pane fade" id="tab0501">
+                            <div class="products row col-sm-12 col-md-12">
+
+                            </div>
+                        </div>                         
+                        <div class="tab-pane fade" id="tab0701">
+                            <div class="products row col-sm-12 col-md-12">
+                                
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab0702">
+                            <div class="products row col-sm-12 col-md-12">
+                                
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab0703">
+                            <div class="products row col-sm-12 col-md-12">
+                                                                                        
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab0704">
+                            <div class="products row col-sm-12 col-md-12">
+                                
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab0705">
+                            <div class="products row col-sm-12 col-md-12">
+                                
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab0706">
+                            <div class="products row col-sm-12 col-md-12">
+                                
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab0707">
+                            <div class="products row col-sm-12 col-md-12">
+                                
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab0801">
+                            <div class="products row col-sm-12 col-md-12">
+                                
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab0802">
+                            <div class="products row col-sm-12 col-md-12">
+                                
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab0803">
+                            <div class="products row col-sm-12 col-md-12">
+                                
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab0804">
+                            <div class="products row col-sm-12 col-md-12">
+                                
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab0805">
+                            <div class="products row col-sm-12 col-md-12">
+                                
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab0806">
+                            <div class="products row col-sm-12 col-md-12">
+                                
+                            </div>
+                        </div>
+                        
+                                                                      
+                    </div>
+
+                    <!-- INICIO PRODUCTOS A CLONAR-->
+                    <div class="hidden products col-md-12">
+                        
+                    </div>
+                    <!-- FIN PRODUCTOS A CLONAR-->
+
+                </div>                    
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container"></div>
+
+<!-- INICIO FOOTER LEO-->
+
+<hr class="d-hr-shadow hr-shadow" style="margin-top: inherit">
+
+<div class="container"></div>
+
+<section class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="partners flexslider" data-maxitems="6" data-minitems="1" data-itemwidth="138" data-itemmargin="20" data-move="4" data-directionnav="true">
+                <ul class="slides">
+                    <li>
+                        <a href="#"><img src="assets/images/content/marca-emiliana.png" alt="preview"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/content/marca-imer.png" alt="preview"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/content/marca-lae.png" alt="preview"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/content/marca-thwaites.jpg" alt="preview"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/content/marca-torgar.png" alt="preview"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/content/marca-dalcom.png" alt="preview"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/content/marca-merlo.png" alt="preview"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container"></div>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <img src="arcanocode/img/logos-de-marcas/logo-mepco.png" class="d-logop" alt=" logo mepco">
+                <br>
+                <br>
+                <p>
+                    Mepco -  Venta y alquiler de manipuladores telescopicos - telehandler y equipos de construcción.
+                </p>
+                <p>  
+                    Av. Circunvalación<br>
+                    Mz "A"<br>
+                    Lote 39E -<br>
+                    Santa Maria de Huachipa<br>
+                <!-- </p>
+                <p>
+                    Av. Los Cipreses 140 of. 302<br />
+                    Edificio Orbes
+                    - Santa Anita - Lima<br> -->
+                    <span class="footer-contacts">
+                        <i class="fa fa-fw fa-phone motive"></i> Telf: 7172457<br>
+                        <i class="fa fa-fw fa-envelope motive"></i> <a href="mailto:ventas@mepcoperu.com">ventas@mepcoperu.com</a>
+                    </span>
+                </p>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <!-- <h4 class="uppercase">Noticias recientes</h4> -->
+                <div class="widget">
+                    <div class="widget-inner">
+                    <!--
+                        <ul>
+                            <li class="cat-item cat-item-2">
+                                <a href="#" title="View all posts filed under Branding">Feria - YO CONSTRUCTOR</a>
+                            <li class="cat-item cat-item-3">
+                                <a href="#" title="View all posts filed under Modern">Evento - MERLO DAY</a>
+                            </li>
+                        </ul>
+                    -->
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix visible-sm"></div>
+
+<!--
+            <div class="col-sm-6 col-md-3">
+                
+                <h4 class="uppercase">Suscribase a nuestras noticias</h4>
+                <div class="successMessage alert alert-success" style="display: none">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    Gracias y bienvendos!
+                </div>
+                <div class="errorMessage alert alert-danger" style="display: none">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    Ups! A ocurrido un error. por favor intente mas tarde.
+                </div>
+
+                <form class="form-inline validateIt form-group-float-label" role="form" action="assets/form/send.php" method="post" data-email-subject="Newsletter Form" data-show-errors="true" data-hide-form="true">
+                    <input type="email" id="newsletter" class="form-control input-lg" name="field[]" required placeholder="Email Address">
+                    <label for="newsletter">Email Address</label>
+                    <button class="button-arrow" type="submit" data-toggle="tooltip" data-placement="bottom" title="Don't worry, we do not spam!"><i class="fa fa-fw fa-angle-double-right"></i> </button>
+                </form>
+                
+            </div>
+            -->
+            <div class="col-sm-6 col-md-4">
+            
+                <!-- <h4 class="uppercase">Nuevos proyectos</h4> -->
+                <div>
+                    <!--
+                    <div class="images-widget">
+                        <a href="#"><img src="assets/images/content/project1-thumb.jpg" alt="Project Name"></a>
+                        <a href="#"><img src="assets/images/content/project3-thumb.jpg" alt="Project Name"></a>
+                        <a href="#"><img src="assets/images/content/project1-thumb.jpg" alt="Project Name"></a>
+                        <a href="#"><img src="assets/images/content/project4-thumb.jpg" alt="Project Name"></a>
+                        <a href="#"><img src="assets/images/content/project1-thumb.jpg" alt="Project Name"></a>
+                        <a href="#"><img src="assets/images/content/project6-thumb.jpg" alt="Project Name"></a>
+                    </div>
+                    -->
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <span id="backtoTop"><i class="fa fa-fw fa-angle-double-up"></i></span>
+</footer>
+
+
+<div class="container"></div>
+
+<div class="post-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                Copyright 2014 © mepco. Todos los derechos reservados - <a href="http://mepcoperu.com" target="_blank">mepcoperu.com</a>
+            </div>
+            <div class="col-sm-6 text-right">
+                <ul class="list-inline">
+                    <li><div class="text-wrapper"><a href="https://www.facebook.com/mepcosac?fref=ts" target="_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="fa fa-facebook fa-fw"></i></a></div></li>
+                    <li><div class="text-wrapper"><a href="https://twitter.com/mepcoperu" target="_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="fa fa-twitter fa-fw"></i></a></div></li>                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<!-- FIN FOOTER LEO-->
+
+<!-- scripts bellow -->
+
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.easing.1.3.js"></script>
+<!-- IE -->
+<script src="assets/js/modernizr.custom.js"></script>
+
+<!-- JS responsible for hover in touch devices -->
+<script src="assets/js/jquery.hoverIntent.js"></script>
+
+<!-- Detects when a element is on wiewport -->
+<script src="assets/js/jquery.appear.js"></script>
+
+<!-- Charts -->
+<script src="assets/js/Chart.js"></script>
+<script src="assets/js/chart.call.js"></script>
+
+<!-- Count to plugin -->
+<script src="assets/js/jquery.countTo.js"></script>
+
+<!-- Revolution Slider -->
+<script src="assets/plugins/revslider/js/jquery.themepunch.revolution.min.js"></script>
+<script src="assets/plugins/revslider/js/jquery.themepunch.plugins.min.js"></script>
+
+<!-- Flexslider -->
+<script src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+
+<!-- Responsible for the sidebar navigation in mobile -->
+<script src="assets/js/snap.min.js"></script>
+
+<!-- Contact form validation -->
+<script src="assets/form/js/contact-form.js"></script>
+
+<!-- our main JS file -->
+<script src="assets/js/main.js"></script>
+
+<!-- our mepco JS file -->
+<script src="arcanocode/js/mepco.js"></script>
+
+<!-- THE JS USED FOR THE SWIMMERS -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<!-- end scripts -->
+</body>
+</html>

@@ -1,0 +1,246 @@
+/*color mepco #00842E */
+
+.d-arcano-section{
+	padding-top: 5px;
+}
+.products > div{
+	/*border: 1px solid #CBCDCF;*/
+	/*height: 335px;*/
+	padding: 10px 10px 10px 10px;
+}
+.products article{
+	/*border: 1px solid rgba(0, 132, 46,0.2);*/
+	/*padding: 5px 5px 5px 5px;*/
+	position: relative;
+	height: 260px;
+	overflow: hidden;
+	background-color: rgba(0, 132, 46,0.2);
+}
+.products article:hover{
+	border: 1px solid rgba(0, 132, 46,0.2);
+}
+.d-imgproducto{
+	/*background-color: red;*/
+	height: 200px;
+	display: flex;
+  	align-items: center;
+}
+	.d-imgproducto img,
+	.d-imgproducto div{height: 157px;width: 100%;}
+
+
+.d-detalleproducto{
+	background-color: rgba(0, 132, 46, 0.8);
+    position: absolute;
+    top: 194px;
+    left: 0;
+    width: 100%;
+    height: 260px;
+	padding: 0px 5px 0 15px;
+    -webkit-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+	   -moz-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+	     -o-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+	        transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
+
+	-webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+	   -moz-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+	     -o-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+	        transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
+}
+.d-detalleproducto h4 a{
+	color:rgba(255,255,255,1);
+	font-size: 14px;
+}
+	.d-detalleproducto h4:hover a{
+		color:rgba(0, 78, 27, 1);
+		font-size: 14px;
+	}
+.d-detalleproducto h4{
+	text-align: center;
+}
+.d-detalleproducto p{
+	color:rgba(255,255,255,1);
+}
+.d-detalleproducto p a{
+	/*color:rgba(0, 78, 27, 1);*/
+	color:rgba(255,255,255,1);
+	font-weight: bold;
+}
+	.d-detalleproducto p:hover a{
+		/*color:rgba(0, 78, 27, 1);*/
+		color:rgba(0, 78, 27, 1);
+		font-weight: bold;
+	}
+.products article:hover .d-detalleproducto{
+	background-color: rgba(0, 132, 46, 0.8);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 260px;
+    padding: 35px 5px 0 15px;
+}
+
+
+.d-h1{
+	font-size: 18px;
+    font-weight: 800;
+    margin-left: 29px;
+}
+.panel-collapse.tabs-vertical{
+	overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 144px;
+}
+
+/***************** inicio leo 18-08-2015 ************************/
+.navbar-with-shadow .navbar.yamm{
+	box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+}
+.panel-group.accordion > .panel > .panel-heading > a {
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    font-weight: 800;
+}
+.nav-tabs > li > a {
+    font-size: 11px;
+    padding: 14px;
+}
+header .text-wrapper {
+    padding: 5px 20px 5px 0 !important;
+}
+body.navbar-fixed.with-topbar .navbar {
+    top: 20px;
+}
+.d-hr-shadow{
+	margin-top: inherit;
+	margin-bottom: inherit;
+}
+.d-logop{
+	height: 40px;
+}
+
+.d-flex{
+	display:flex;
+}
+.d-flexone{
+	flex:1;
+}
+
+.d-descripcion{
+	width: 110px;
+	font-weight:bold;
+}	
+.d-superior{
+	margin: 30px 0 0 0;
+}
+	.d-superior > div{
+		flex:1;
+		padding: 0 2% 0 2%;
+		position: relative;
+	}
+	.d-superior .flex-control-nav{
+		bottom: -25px;
+	}
+.d-content-img{
+	max-height: 343px;
+}
+	.d-content-img > div{
+
+		display:flex;
+		justify-content: center;
+  		align-items: center;
+  		padding: 5px;
+    	border: 1px solid #dbdbdb;
+    	background-color: #fff;
+	}
+.d-viewimage{
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	max-width: 375px;
+	max-height: 246px;
+	width: 375px;
+	height: 246px;
+}
+.d-pdf{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+	.d-pdf>div{
+		margin: 0 20px 30px 0;
+	}
+
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    border: solid 1px #dee0e3;
+    height: 3em;
+    line-height: 2.95em;
+    padding: 0 1.5em 0 1.5em;
+}
+a.button{
+    text-decoration: none;
+    border-bottom: dotted 1px #d0d6e2;
+    color: inherit;
+    -moz-transition: color 0.2s ease-in-out,border-color 0.2s ease-in-out,background-color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out,border-color 0.2s ease-in-out,background-color 0.2s ease-in-out;
+    -ms-transition: color 0.2s ease-in-out,border-color 0.2s ease-in-out,background-color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out,border-color 0.2s ease-in-out,background-color 0.2s ease-in-out;
+}
+.button.download {
+    border-color: #4CAF50;
+    background: #4CAF50;
+    color: #fff;
+}
+.button.download:hover {
+    border-color: #e7746f !important;
+    background: #e7746f !important;
+    color: #fff !important;
+}
+.d-justificar{
+	text-align : justify;
+}
+.d-icondownload{
+	margin-left: 15px;
+    font-size: 25px;
+}
+.d-historia-img{
+	height: 300px;
+    width: 300px;
+    margin-left: 40px;
+}
+.d-mision-img,
+.d-vision-img{
+	width: 476px;
+    height: 150px;
+    margin-left: 40px;
+}
+
+/***************** fin leo 18-08-2015 ************************/
+
+
+/***************** arkano 18/28/2015 *************************/
+.d-especificacion{
+	width: 30%;
+}
+.a ul {
+	list-style:lower-alpha;
+}
+.b ul{
+	list-style:upper-roman;
+}
+
+
+/*************************bloger 1/09*****************************/
+
+.d-bloger{
+	border-top: 2px solid rgb(204, 230, 213);
+	border-bottom: 2px solid  rgb(204, 230, 213);
+	font-size: 20px;
+}
